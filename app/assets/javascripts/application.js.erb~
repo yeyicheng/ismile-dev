@@ -1,0 +1,122 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
+  var gblPhotoShufflerDivId = "photodiv";
+  var gblPhotoShufflerImgId = "photoimg";
+  var gblPhotoShufflerAnchorId = "photoanchor";
+  var gblImg = new Array(
+    '<%= asset_path("BOConcept Logo.jpg") %>',
+    '<%= asset_path("BOConcept Logo.jpg") %>',
+    '<%= asset_path("BOConcept Logo.jpg") %>'
+    );
+  var gblHref = new Array(
+    "http://google.com",
+    "javascript:alert('long way down');",
+    "http://iamacamera.org"
+    );
+  var gblPauseSeconds = 7.25;
+  var gblFadeSeconds = .85;
+  var gblRotations = 1;
+
+  // End Customization section
+  
+  var gblDeckSize = gblImg.length;
+  var gblOpacity = 100;
+  var gblOnDeck = 0;
+  var gblStartImg;
+  var gblStartHref;
+  var gblImageRotations = gblDeckSize * (gblRotations+1);
+
+  window.onload = photoShufflerLaunch;
+  
+  function photoShufflerLaunch()
+  {
+  	var theimg = document.getElementById(gblPhotoShufflerImgId);
+        gblStartImg = theimg.src; // save away to show as final image
+  	var theanchor = document.getElementById(gblPhotoShufflerAnchorId);
+        gblStartHref = theimg.href; // save away to show as final image
+
+	document.getElementById(gblPhotoShufflerDivId).style.backgroundImage='url(' + gblImg[gblOnDeck] + ')';
+	setTimeout("photoShufflerFade()",gblPauseSeconds*1000);
+  }
+
+  function photoShufflerFade()
+  {
+  	var theimg = document.getElementById(gblPhotoShufflerImgId);
+	
+  	// determine delta based on number of fade seconds
+	// the slower the fade the more increments needed
+        var fadeDelta = 100 / (30 * gblFadeSeconds);
+
+	// fade top out to reveal bottom image
+	if (gblOpacity < 2*fadeDelta ) 
+	{
+	  gblOpacity = 100;
+	  // stop the rotation if we're done
+	  if (gblImageRotations < 1) return;
+	  photoShufflerShuffle();
+	  // pause before next fade
+          setTimeout("photoShufflerFade()",gblPauseSeconds*1000);
+	}
+	else
+	{
+	  gblOpacity -= fadeDelta;
+	  setOpacity(theimg,gblOpacity);
+	  setTimeout("photoShufflerFade()",30);  // 1/30th of a second
+	}
+  }
+
+  function photoShufflerShuffle()
+  {
+	var thediv = document.getElementById(gblPhotoShufflerDivId);
+	var theimg = document.getElementById(gblPhotoShufflerImgId);
+	var theanchor = document.getElementById(gblPhotoShufflerAnchorId);
+	
+	// copy div background-image to img.src
+	theimg.src = gblImg[gblOnDeck];
+	theanchor.href = gblHref[gblOnDeck];
+	window.status = gblHref[gblOnDeck]; // updates status bar (optional)
+	// set img opacity to 100
+	setOpacity(theimg,100);
+
+        // shuffle the deck
+	gblOnDeck = ++gblOnDeck % gblDeckSize;
+	// decrement rotation counter
+	if (--gblImageRotations < 1)
+	{
+	  // insert start/final image if we're done
+	  gblImg[gblOnDeck] = gblStartImg;
+	  gblHref[gblOnDeck] = gblStartHref;
+	}
+
+	// slide next image underneath
+	thediv.style.backgroundImage=gblImg[gblOnDeck];
+  }
+
+function setOpacity(obj, opacity) {
+  opacity = (opacity == 100)?99.999:opacity;
+  
+  // IE/Win
+  obj.style.filter = "alpha(opacity:"+opacity+")";
+  
+  // Safari<1.2, Konqueror
+  obj.style.KHTMLOpacity = opacity/100;
+
+  // Older Mozilla and Firefox
+  obj.style.MozOpacity = opacity/100;
+
+  // Safari 1.2, newer Firefox and Mozilla, CSS3
+  obj.style.opacity = opacity/100;
+}

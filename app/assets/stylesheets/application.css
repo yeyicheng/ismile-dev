@@ -11,3 +11,67 @@
  *= require_self
  *= require_tree .
  */
+
+.container {
+	width: 1000px;	
+	margin: 0 auto;
+	background: #eee;
+	overflow: hidden;
+	zoom: 1;
+}
+.mainbody {
+	clear: both;
+}
+.main {
+	float:left;
+	/* background-color: black; */
+	width: 60%;	
+	padding: 10px;
+}
+.side {
+	float:right;
+	border-left: solid 1px grey;
+	padding: 10px;
+}
+.side div{
+	margin-bottom: 10px;
+}
+#photodiv {
+	width: 300px;
+	height: 200px;	
+}
+ 
+/* Site Navigation */
+ul { 	
+	border: solid 1px blue;
+	background: #eee;
+}
+ul li {
+	display: inline-block;	
+}
+ul li ul { 
+	padding: 0;
+	position:absolute;
+	display: none;
+}
+ul li ul li{
+	display: block;
+	position: relative;
+}
+ul li:hover ul, ul li.hover ul {
+	display: block;
+}
+ul li a{
+	display:block;
+	padding: 3px 10px;
+	margin-right:1px;
+	text-decoration: none;
+	color: #777;
+	background:#eee;
+}
+ul li a:hover{
+	background-color:#f4f4f4;
+}	
+/* End of Site Navigation */
+
+/* Side bar - Clients */

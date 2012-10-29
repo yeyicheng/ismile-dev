@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ .container {
+ 	width: 1000px;	
+ 	margin: 0 auto;
+ }
+ 
+.header ul.site-nav {
+	background-color: grey;
+	padding: 5px 0.7em;
+	white-space: nowrap;
+	margin: 5px auto;
+	text-align: center;
+	font-size: 100%;
+}
+ 
+.header ul.site-nav {
+	margin: 0 auto;	
+}
+
+.header ul.site-nav li {
+	display: inline-block;	
+}
+
+.header ul.site-nav li a {
+	color: white;
+	padding: 0 10px;
+	display:inline-block;
+	/* width: 100px; */
+	text-align: center;
+}
+
+.header ul.site-nav li a:visited {
+	color: white;
+}
+
+.header ul.site-nav li a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.header ul li ul.sub-site-nav{
+	display: none;	
+	position:absolute;
+}
+
+.header ul.site-nav ul li {
+	position: relative;
+	display: block;
+	line-height: 20px;
+	z-index: 9999 !important;
+}
+
+.header ul.site-nav ul li a,
+.header ul.site-nav ul li:hover ul li a,
+.header ul.site-nav ul li.hover ul li a { /* This line is required for IE 6 and below */
+	font-weight: normal; /* resets the bold set for the top level menu items */
+	border: 1px solid grey;
+    background: grey; 
+    color: darkred;
+    width: 200px;
+}
+
+.header ul.site-nav ul li a:hover,
+.header ul.site-nav li:hover ul li a:hover,
+.header ul.site-nav li.hover ul li a:hover { /* This line is required for IE 6 and below */
+	/* #36f */
+	background: lightgrey; /* Sub menu items background colour */
+	color: #fff;
+}
+
+/* Make the sub menus appear on hover */
+.header ul.site-nav li:hover ul,
+.header ul.site-nav li.hover ul { /* This line is required for IE 6 and below */
+	display:block; /* Show the sub menus */
+}

@@ -1,0 +1,59 @@
+<div class="header">
+	<div id='logo'>
+		<%= link_to (image_tag "logo_s.png", width: '200'), root_path %>
+	</div>
+	<div class='head-img'></div>
+	<div class='img-txt'></div>
+	<ul class='site-nav'>
+		<li><%= link_to 'Home', root_path %>
+			<ul class="sub-site-nav">
+				<li><%= link_to '', '#' %></li>
+				<li><%= link_to 'Introduction', '#' %></li>
+				<li><%= link_to '"initiative + Smile"', '#' %></li>
+				<li><%= link_to 'The People', '#' %></li>
+			</ul>
+		</li>
+		<li><%= link_to 'Marketing', pages_marketing_path %>
+			<ul class="sub-site-nav">
+				<li><%= link_to '', '#' %></li>
+				<li><%= link_to 'Service', '#' %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+				<li><%= link_to 'Case & Client', '#' %></li>
+			</ul>
+		</li>
+		<li><%= link_to 'Service Quality', pages_service_path %>
+			<ul class="sub-site-nav">
+				<li><%= link_to '', '#' %></li>
+				<li><%= link_to 'Service', '#' %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+				<li><%= link_to 'Case & Client', '#' %></li>
+			</ul>
+		</li>
+		<li><%= link_to 'Training', pages_training_path %>
+			<ul class="sub-site-nav">
+				<li><%= link_to '', '#' %></li>
+				<li><%= link_to 'Service', '#' %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+				<li><%= link_to 'Course & Partner', '#' %></li>
+				<li><%= link_to 'Case & Client', '#' %></li>
+			</ul>
+		</li>
+		<li><%= link_to 'Career', pages_career_path %>
+			<ul class="sub-site-nav">
+				<li><%= link_to '', '#' %></li>
+				<li><%= link_to 'Service', '#' %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+				<li><%= link_to 'Case & Client', '#' %></li>
+				<li><%= link_to 'Opportunity Center', '#' %></li>
+			</ul>
+		</li>
+		<li><%= link_to 'Taskforce', pages_taskforce_path %>
+			<ul class="sub-site-nav">
+				<li><%= link_to '', '#' %></li>
+				<li><%= link_to 'Special Projects', '#' %></li>
+			</ul>
+		</li>
+		<li><%= link_to 'Our Clients', pages_clients_path %></li>
+		<li><%= link_to 'Contact us', pages_contact_path %></li>
+	</ul>
+</div>
