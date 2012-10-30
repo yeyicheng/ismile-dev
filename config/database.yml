@@ -32,11 +32,9 @@ test:
   host: localhost
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: ismile1
+  adapter: postgresql
+  encoding: unicode
+  database: ismile_production
   pool: 5
-  username: root
+  username: yichengye
   password: admin
-  host: ismile1.db.10014354.hostedresource.com
