@@ -1,8 +1,14 @@
 <div class="side">
-	<div>Our Clients:</div>
+	<div>Our Clients include:</div>
 	<div id="photodiv">
 		<a id="photoanchor" href="http://flickr.com">
 			<img id="photoimg" src='<%= asset_path("Logo Uliving.jpg") %>' />
 		</a>
+	</div>
+	<div class="social-links">
+		Find us on: <br />
+		<%= link_to (image_tag "linkedin.png"), 'http://www.linkedin.com/company/ismile-consulting-&-solutions?trk=hb_tab_compy_id_2733798', target: "_blank" %>
+		<%= link_to (image_tag "facebook.png"), 'http://www.facebook.com/pages/iSmile-Consulting-Solutions/180452365340973', target: "_blank" %>
+		<%= link_to (image_tag "weibo.png"), 'http://weibo.com/ismilecs', target: "_blank" %>  
 	</div>
 </div>

@@ -52,6 +52,7 @@
         gblStartHref = theimg.href; // save away to show as final image
 
 	document.getElementById(gblPhotoShufflerDivId).style.backgroundImage='url(' + gblImg[gblOnDeck] + ')';
+	document.getElementById(gblPhotoShufflerDivId).style.border='solid 1px lightgrey';
 	setTimeout("photoShufflerFade()",gblPauseSeconds*1000);
   }
 
