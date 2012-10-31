@@ -14,8 +14,14 @@ class PagesController < ApplicationController
 	def contact
 		@title = 'Contact Us'
 	end
+	def initiative
+		@title = '"Initiative + Smile"'
+	end
 	def marketing
 		@title = 'Marketing'
+	end
+	def people
+		@title = 'The People'
 	end
 	def service
 		@title = 'Service Quality'

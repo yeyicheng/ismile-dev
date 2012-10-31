@@ -2,24 +2,32 @@
 	<div id='logo'>
 		<%= link_to (image_tag "logo_s.png", width: '300'), root_path %>
 	</div>
+	<ul class='top-nav'>
+		<li><%= link_to 'initiative + Smile', pages_initiative_path %></li>
+		<li><%= link_to 'Career Development', pages_career_path %></li>			
+		<li><%= link_to 'Marketing', pages_marketing_path %></li>
+		<li><%= link_to 'Service Quality', pages_service_path %></li>
+		<li><%= link_to 'Taskforce', pages_taskforce_path %></li>
+		<li><%= link_to 'Training', pages_training_path %></li>
+	</ul>
 	<div class='head-img'></div>
 	<div class='img-txt'></div>
 	<ul class='site-nav'>
-		<li><%= link_to 'Home', root_path %>
+		<li><%= link_to 'Home', root_path %></li>
 		<li><%= link_to 'About Us', '#' %>
 			<ul class="sub-site-nav">
 				<li><%= link_to 'Introduction', pages_about_path %></li>
-				<li><%= link_to '"initiative + Smile"', '#' %></li>
-				<li><%= link_to 'The People', '#' %></li>
+				<li><%= link_to '"initiative + Smile"', pages_initiative_path %></li>
+				<li><%= link_to 'The People', pages_people_path %></li>
 			</ul>
 		</li>
 		<li><%= link_to 'Service', '#' %>
 			<ul class="sub-site-nav">
-				<li><%= link_to 'Career', pages_career_path %>				
-				<li><%= link_to 'Marketing', pages_marketing_path %>
-				<li><%= link_to 'Service Quality', pages_service_path %>
-				<li><%= link_to 'Taskforce', pages_taskforce_path %>
-				<li><%= link_to 'Training', pages_training_path %>
+				<li><%= link_to 'Career Development', pages_career_path %></li>				
+				<li><%= link_to 'Marketing', pages_marketing_path %></li>
+				<li><%= link_to 'Service Quality', pages_service_path %></li>
+				<li><%= link_to 'Taskforce', pages_taskforce_path %></li>
+				<li><%= link_to 'Training', pages_training_path %></li>
 			</ul>
 		</li>
 		<li><%= link_to 'Our Clients', pages_clients_path %></li>

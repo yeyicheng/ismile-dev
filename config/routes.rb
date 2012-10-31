@@ -16,7 +16,10 @@ Ismile::Application.routes.draw do
   get "pages/clients"
 
   get "pages/contact"
-
+ 
+  get "pages/initiative"
+  
+  get "pages/people"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

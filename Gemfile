@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'capistrano'
 gem 'heroku'
 gem 'pg'
+gem 'mysql2'
 
 group :development, :test do
   gem 'rspec-rails'

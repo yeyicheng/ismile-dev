@@ -16,7 +16,7 @@ set :deploy_to, '/try/'
 
 role :web, "118.139.174.1"                          # Your HTTP server, Apache/etc
 role :app, "118.139.174.1"                          # This may be the same as your `Web` server
-# role :db,  "sg2nlhdb5003-04.shr.prod.sin2.secureserver.net", :primary => true # This is where Rails migrations will run
+role :db,  "182.50.133.152", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
 
 ssh_options[:keys] = %w(~/.ssh/hello) 
