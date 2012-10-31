@@ -32,17 +32,18 @@ test:
   host: localhost
 
 production:
-  adapter: mysql2
-  encoding: unicode
-  database: ismile2
-  pool: 5
-  username: ismile2
-  password: Yyc!910310
-  
-production:
   adapter: postgresql
   encoding: unicode
   database: ismile_production
   pool: 5
   username: yyc
   password: admin
+  
+production:
+  adapter: mysql2
+  encoding: unicode
+  database: ismile2
+  pool: 5
+  username: ismile2
+  password: Yyc!910310
+  host: ismile2.db.10014354.hostedresource.com
