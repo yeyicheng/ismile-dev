@@ -1,2 +1,40 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Welcome to iSmile Consulting & Solutions</h1>
+<div class="slider3" id="slider3">
+	<ul>
+		<li><%= image_tag "1.png", width: "600px", height:"250px" %></li>
+		<%# <li><%= image_tag "2.png", width: "600px", height:"250px" %></li> %>
+		<li><%= image_tag "3.png", width: "600px", height:"250px" %></li>
+		<%# <li><%= image_tag "4.png", width: "600px", height:"250px" %></li> %>
+	</ul>
+	<ul class="slider3_nav" >
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</div>
+		
+<!-- 独立版本 -->
+<script src="../build/release/jwidget_1.0.0-min.js"></script>
+<script type="text/javascript">
+	jWidget.ui.SlideView("slider3", {effect: 'scrolly fade'});
+</script>
+
+<style>
+	ul li a {
+		text-decoration: none;
+		color: darkred;
+	}
+</style>
+<div style='margin: 20px 0 0 0;'>
+Please find out more:
+<blockquote>
+	<ul style='list-style: circle; color: darkred;'>
+		<li><%= link_to 'What we do – overview to our services', pages_about_path %></li>
+		<li><%= link_to 'Our marketing research and insights', pages_marketing_path %></li>
+		<li><%= link_to 'Our training experience and services', pages_training_path %></li>
+		<li><%= link_to 'About our people', pages_contact_path %></li>
+		<li><%= link_to 'Contact us', pages_contact_path %></li>
+	</ul>
+</blockquote>
+</div>
