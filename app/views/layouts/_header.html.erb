@@ -11,8 +11,6 @@
 		<li><%= link_to 'Training', pages_training_path %></li>
 		<% if current_user %>
 			<li><%= link_to 'Log out', logout_path %></li> 
-		<% else %>
-			<li><%= link_to 'Sign in', sessions_new_path %></li> 
 		<% end %>
 	</ul>
 	<div class='head-img'></div>
