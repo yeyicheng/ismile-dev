@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
 			t.integer :gender
 			t.integer :age
 			t.string :enc_pwd
-			t.string :edu_level
+			t.integer :edu_level
 			t.string :salt
 			t.string :username
 			

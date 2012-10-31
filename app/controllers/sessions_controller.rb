@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
 	def new
-
 	end
 
 	def create
@@ -10,7 +9,8 @@ class SessionsController < ApplicationController
 			session[:user_id] = user.id
 			redirect_to root_path
 		elsif user = User.find_by_email(params[:email])
-			redirect_to sessions_new_path, alert: 'Invalid user/password conbination.'
+			flash[:alert] = "Invalid Email/Password Combination."
+			render :new
 		else
 			redirect_to new_users_path, alert: 'Please sign up first.'				
 		end

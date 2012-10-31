@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121031054200) do
     t.integer  "gender"
     t.integer  "age"
     t.string   "enc_pwd"
-    t.string   "edu_level"
+    t.integer  "edu_level"
     t.string   "salt"
     t.string   "username"
     t.datetime "created_at", :null => false
