@@ -1,0 +1,11 @@
+<!-- START_HIGHLIGHT -->
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% elsif flash[:alert] %>
+	<p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<!-- END_HIGHLIGHT -->
+
+<h1>New User Registration</h1>
+
+<%= render 'form' %>

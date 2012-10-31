@@ -183,3 +183,40 @@ body {
 	clear: both;
 	height: 100px;	
 }
+
+/* Styles for order form */
+.ismile_form fieldset {
+	width: 550px;
+	background: #eee;
+}
+.ismile_form legend {
+	color: white;
+	background: darkred;
+	font-family: sans-serif;
+	padding: 0.2em 1em;
+}
+.ismile_form label {
+	width: 8em;
+	float: left;
+	text-align: left;
+	padding-top: 0.2em;
+	margin-right: 0.1em;
+	display: block;
+}
+.ismile_form select, .ismile_form textarea, .ismile_form input {
+	margin-left: 0.5em;
+	background-color: white;
+}
+
+.ismile_form div {
+	margin: 2em 0;	
+}
+
+#notice {
+	color: #000;
+	border: 2px solid darkgreen;
+	padding: 1em;
+	margin: 2em 0 0 0;
+	background-color: #f0f0f0;
+	font: bold smaller sans-serif;
+}

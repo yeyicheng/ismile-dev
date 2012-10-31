@@ -1,25 +1,32 @@
 Ismile::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/about"
-
-  get "pages/marketing"
-
-  get "pages/service"
-
-  get "pages/training"
-
-  get "pages/career"
-
-  get "pages/taskforce"
-
-  get "pages/clients"
-
-  get "pages/contact"
- 
-  get "pages/initiative"
-  
-  get "pages/people"
+	resource :users
+	match "/users/:id" => "users#show", :as => 'users_show'
+	controller :sessions do
+		get  'sessions/new' => :new
+		post 'sessions/new' => :create
+	end
+	match "/logout" => "sessions#destroy"
+	get "pages/home"
+	
+	get "pages/about"
+	
+	get "pages/marketing"
+	
+	get "pages/service"
+	
+	get "pages/training"
+	
+	get "pages/career"
+	
+	get "pages/taskforce"
+	
+	get "pages/clients"
+	
+	get "pages/contact"
+	
+	get "pages/initiative"
+	
+	get "pages/people"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

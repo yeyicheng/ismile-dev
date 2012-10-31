@@ -1,0 +1,71 @@
+<div class="ismile_form">
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %>
+        prohibited this user from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+	  <legend>Enter User Details</legend>
+	
+	  <div>
+		<%= f.label :username %>:
+		<%= f.text_field :username, :size => 40 %>
+	  </div>
+	  
+	  <div>
+		<%= f.label :email %>:
+		<%= f.email_field :email, :size => 40 %>
+	  </div>
+	  
+	  <div>
+		<%= f.label :first_name, 'First Name' %>:
+		<%= f.text_field :first_name, :size => 40 %>
+	  </div>
+	  
+	  <div>
+		<%= f.label :last_name, 'Last Name' %>:
+		<%= f.text_field :last_name, :size => 40 %>
+	  </div>
+	  
+	  <div>
+		<%= f.label :age %>:
+		<%= f.text_field :age, :size => 40 %>
+	  </div>
+	  
+	  <div>
+		<%= f.label :gender %>:
+		<%= f.password_field :gender, :size => 40 %>
+	  </div>
+	  	  
+	  <div>
+		<%= f.label :edu_level, 'Education Level' %>:
+		<%= f.password_field :edu_level, :size => 40 %>
+	  </div>
+	  
+	  <div>
+		<%= f.label :pwd, 'Password' %>:
+		<%= f.password_field :pwd, :size => 40 %>
+	  </div>
+	
+	  <div>
+		<%= f.label :pwd_confirm, 'Confirm' %>:
+		<%= f.password_field :pwd_confirm, :size => 40 %>
+	  </div>
+	
+	  <div>
+		<%= f.submit 'Submit'%>
+	  </div>
+	  
+  </fieldset>
+<% end %>
+
+</div>

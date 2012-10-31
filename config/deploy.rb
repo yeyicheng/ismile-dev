@@ -13,10 +13,11 @@ set :deploy_via, :remote_cache
 set :user, "ismile0719"
 set :password, "V!ctor0719"
 set :deploy_to, '/try/'
+set :use_sudo, false 
 
 role :web, "118.139.174.1"                          # Your HTTP server, Apache/etc
 role :app, "118.139.174.1"                          # This may be the same as your `Web` server
-role :db,  "182.50.133.152", :primary => true # This is where Rails migrations will run
+role :db,  "118.139.174.1", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
 
 ssh_options[:keys] = %w(~/.ssh/hello) 
