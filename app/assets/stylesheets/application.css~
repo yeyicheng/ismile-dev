@@ -50,6 +50,9 @@ body {
 	width: auto;
 	margin: 0;
 }
+.header .top-nav li{
+	*display: inline;
+}
 
 .header .top-nav li a {
 	background: darkred;
@@ -73,7 +76,9 @@ body {
 .header ul li {
 	display: inline-block;	
 	margin: 0 30px;
-	/* width: 130px; */
+}
+.header ul li{
+	*display: inline;
 }
 .header ul li ul { 
 	padding: 0;

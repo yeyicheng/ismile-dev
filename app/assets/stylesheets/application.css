@@ -78,13 +78,14 @@ body {
 	margin: 0 30px;
 }
 .header ul li{
-	*display: inline;
+	_display: inline;
 }
 .header ul li ul { 
 	padding: 0;
 	position:absolute;
 	display: none;
 	text-align: left;
+	z-index: 9999 !important;
 }
 .header ul li ul li {
 	margin: 0 0 0 0;
