@@ -25,8 +25,48 @@ fieldset{ margin:14px; padding:14px; float:left}
 body {
 }
 
+/* Round corners */
+.round {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.with-border{
+	border: solid 1px lightgrey;
+}
+
+.header #logo {
+	float: left;	
+}
+
+/* top nav */
+.header .top-nav {
+	float: right;
+	margin: 10px 50px 0 0;
+	padding: 0;
+}
+.header .top-nav li{
+	display: inline-block;
+	width: auto;
+	margin: 0;
+}
+
+.header .top-nav li a {
+	background: darkred;
+	color: white;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.header .top-nav li a:hover {
+	background: #803939;
+	color: white;
+}
+
 /* site navigation */
-.header ul { 	
+.header ul.site-nav { 	
+	clear: both;
 	background: #eee;
 	text-align: center;
 }
@@ -102,6 +142,9 @@ body {
 .main p{
 	margin: 5px 0 0 0;	
 }
+.main pre{
+	font:12px/18px Verdana, Simsun, Helvetica, Arial, sans-serif;
+}
 .main .namecard {
 	border: solid 1px grey;
 	padding: 10px;
@@ -139,4 +182,68 @@ body {
 .footer {
 	clear: both;
 	height: 100px;	
+}
+
+/* Styles for order form */
+.ismile_form fieldset {
+	width: 550px;
+	background: #eee;
+}
+.ismile_form legend {
+	color: white;
+	background: darkred;
+	font-family: sans-serif;
+	padding: 0.2em 1em;
+}
+.ismile_form label {
+	width: 8em;
+	float: left;
+	text-align: left;
+	padding-top: 0.2em;
+	margin-right: 0.1em;
+	display: block;
+}
+.ismile_form select, .ismile_form textarea, .ismile_form input {
+	margin-left: 0.5em;
+	background-color: white;
+}
+
+.ismile_form div {
+	margin: 2em 0;	
+}
+
+#notice {
+	color: #000;
+	border: 2px solid darkred;
+	padding: 1em;
+	margin: 2em 0 0 0;
+	background-color: #f0f0f0;
+	font: normal smaller sans-serif;
+}
+#error_explanation {
+	width: 400px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin: 0 0 20px 15px;
+	background-color: #f0f0f0;
+}
+#error_explanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+#error_explanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+#error_explanation ul li {
+	font-size: 12px;
+	list-style: square;
+	margin: 10px 0 0 15px;
 }

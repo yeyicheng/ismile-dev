@@ -47,6 +47,7 @@ body {
 }
 .header .top-nav li{
 	display: inline-block;
+	_display: inline;
 	width: auto;
 	margin: 0;
 }
