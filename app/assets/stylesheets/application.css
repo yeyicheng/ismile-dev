@@ -84,6 +84,8 @@ body {
 	padding: 0;
 	position:absolute;
 	display: none;
+	width: 200px;
+	background-color: #eee;
 	text-align: left;
 	z-index: 9999 !important;
 }
