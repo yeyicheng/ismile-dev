@@ -2,9 +2,9 @@
 <div class="slider3" id="slider3">
 	<ul>
 		<li><%= image_tag "1.png", width: "600px", height:"250px" %></li>
-		<%# <li><%= image_tag "2.png", width: "600px", height:"250px" %></li> %>
 		<li><%= image_tag "3.png", width: "600px", height:"250px" %></li>
-		<%# <li><%= image_tag "4.png", width: "600px", height:"250px" %></li> %>
+		<li><%= image_tag "5.png", width: "600px", height:"250px" %></li>
+		<li><%= image_tag "6.png", width: "600px", height:"250px" %></li>
 	</ul>
 	<ul class="slider3_nav" >
 		<li>1</li>
