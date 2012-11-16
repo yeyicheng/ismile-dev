@@ -84,7 +84,10 @@ body {
 	padding: 0;
 	position:absolute;
 	display: none;
+	width: 200px;
+	background-color: #eee;
 	text-align: left;
+	z-index: 9999 !important;
 }
 .header ul li ul li {
 	margin: 0 0 0 0;
@@ -92,7 +95,7 @@ body {
 	position: relative;
 	z-index: 9999 !important;
 }
-.header ul li:hover ul, ul li.hover ul {
+.header ul li:hover ul, ul li.hover ul, ul li.over ul {
 	display: block;
 }
 .header ul li a {
@@ -105,7 +108,10 @@ body {
 }
 .header ul li a:hover {
 	background-color:#f4f4f4;
-}	
+}
+.header ul li ul li a:hover {
+	display: block;
+}
 
 /* container */
 .container {
