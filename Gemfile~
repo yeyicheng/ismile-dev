@@ -9,8 +9,10 @@ gem 'capistrano'
 gem 'heroku'
 gem 'pg'
 
+
 group :development, :test do
   gem 'rspec-rails'
+  gem 'mysql2'
 end
 
 # Gems used only for assets and not required

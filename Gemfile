@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,10 +8,11 @@ gem 'rails', '3.2.8'
 gem 'capistrano'
 gem 'heroku'
 gem 'pg'
-gem 'mysql2'
+
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'mysql2'
 end
 
 # Gems used only for assets and not required

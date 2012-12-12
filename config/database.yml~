@@ -8,28 +8,36 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
-development:
-  adapter: postgresql
-  encoding: unicode
-  reconnect: false
-  database: ismile_development
-  pool: 5
-  username: yyc
-  password: admin
-  host: localhost
+#development:
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  database: ismile_development
+#  pool: 5
+#  username: root
+#  password: admin
+#  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+#test:
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  database: ismile_test
+#  pool: 5
+#  username: root
+#  password: admin
+#  host: localhost
+
+development:
   adapter: postgresql
   encoding: unicode
-  reconnect: false
-  database: ismile_test
+  database: ismile_development
   pool: 5
   username: yyc
   password: admin
-  host: localhost
 
 production:
   adapter: postgresql
@@ -38,3 +46,12 @@ production:
   pool: 5
   username: yyc
   password: admin
+  
+production:
+  adapter: mysql2
+  encoding: unicode
+  database: ismile2
+  pool: 5
+  username: ismile2
+  password: Yyc!910310
+  host: ismile2.db.10014354.hostedresource.com

@@ -1,2 +1,33 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<!-- START_HIGHLIGHT -->
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% elsif flash[:alert] %>
+	<p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<!-- END_HIGHLIGHT -->
+
+<div class="ismile_form">
+	
+	<%= form_tag do %>
+		<fieldset>
+			<legend>Please Log In</legend>
+	
+			<div>
+				<label for="email">Email:</label>
+				<%= text_field_tag :email, params[:email] %>
+			</div>
+	
+			<div>
+				<label for="pwd">Password:</label>
+				<%= password_field_tag :pwd, params[:pwd] %>
+			</div>
+	
+			<div style="margin-left: 0px;">
+				<%= submit_tag "Log in" %>
+				<span style="margin-left: 80px;">
+					<%= link_to "New user?", new_users_path %>
+				</span>
+			</div>
+		</fieldset>
+	<% end %>
+</div>
