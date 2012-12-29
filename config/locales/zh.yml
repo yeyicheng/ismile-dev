@@ -1,19 +1,19 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
-  home: "Home"
-  about: "About us"
-  intro: "Introduction"
+zh:
+  home: "首页"
+  about: "关于我们"
+  intro: "简介"
   initiative: "initiative + Smile"
   people: "The People"
-  service: "Service" 
+  service: "服务" 
   career: "Career Development"
-  quality: "Service Quality"
+  quality: "服务质量"
   taskforce: "Taskforce"
-  training: "Training"
-  online: "Online"
-  clients: "Our Clients"
-  contact: "Contact us"
+  training: "培训"
+  online: "在线"
+  clients: "我们的客户"
+  contact: "联系我们"
   team: "the iSmile Team"
-  logout: "Logout"
+  logout: "登出"

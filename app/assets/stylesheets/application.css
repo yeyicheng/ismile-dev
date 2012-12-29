@@ -66,6 +66,12 @@ body {
 	background: #803939;
 	color: white;
 }
+.header #multi-lang{
+	float: right;
+	margin-right: 10px;
+	text-align: right;
+	width: 500px;
+}
 
 /* site navigation */
 .header ul.site-nav { 	
