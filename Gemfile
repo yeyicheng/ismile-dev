@@ -8,7 +8,7 @@ gem 'rails'
 gem 'capistrano'
 gem 'heroku'
 gem 'pg'
-
+gem 'meta_search'
 
 group :development, :test do
   gem 'rspec-rails'

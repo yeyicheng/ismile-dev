@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	attr_accessible :age, :edu_level, :email, :enc_pwd, :first_name, :gender,
-	:last_name, :salt, :pwd, :pwd_confirm, :username
+	:last_name, :salt, :pwd, :pwd_confirm, :username, :admin
 	attr_reader :pwd
 	attr_accessor :pwd_confirm
 	

@@ -5,7 +5,7 @@
 	<ul class='top-nav'>
 		<% if params[:locale] == 'zh' %>
 			<li><%= link_to t('initiative'), pages_initiative_path + "?locale=zh" %></li>
-			<li><%= link_to t('career'), pages_career_path + '?locale=zh' %></li>			
+			<li><%= link_to t('career'), jobs_path + '?locale=zh' %></li>			
 			<li><%= link_to t('marketing'), pages_marketing_path + '?locale=zh' %></li>
 			<li><%= link_to t('team'), pages_people_path + '?locale=zh' %></li>
 			<li><%= link_to t('taskforce'), pages_taskforce_path + '?locale=zh' %></li>
@@ -15,7 +15,7 @@
 			<% end %>
 		<% else %>
 			<li><%= link_to t('initiative'), pages_initiative_path %></li>
-			<li><%= link_to t('career'), pages_career_path %></li>			
+			<li><%= link_to t('career'), jobs_path %></li>			
 			<li><%= link_to t('marketing'), pages_marketing_path %></li>
 			<li><%= link_to t('team'), pages_people_path %></li>
 			<li><%= link_to t('taskforce'), pages_taskforce_path %></li>
@@ -61,7 +61,7 @@
 		</li>
 		<li><%= link_to t('service'), '#' %>
 			<ul class="sub-site-nav">
-				<li><%= link_to t('career'), pages_career_path %></li>				
+				<li><%= link_to t('career'), jobs_path %></li>				
 				<li><%= link_to t('marketing'), pages_marketing_path %></li>
 				<li><%= link_to t('quality'), pages_service_path %></li>
 				<li><%= link_to t('taskforce'), pages_taskforce_path %></li>

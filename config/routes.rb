@@ -1,4 +1,10 @@
 Ismile::Application.routes.draw do
+  resources :categories
+
+
+  resources :jobs
+
+
 	resource :users
 	match "/users/:id" => "users#show", :as => 'users_show'
 	controller :sessions do

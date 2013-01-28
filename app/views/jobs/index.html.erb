@@ -1,0 +1,47 @@
+<h1>Career Development</h1>
+
+<!-- START_HIGHLIGHT -->
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% elsif flash[:alert] %>
+	<p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<!-- END_HIGHLIGHT -->
+
+<div class="ismile_form">
+<fieldset>
+	<legend>Search Jobs</legend>
+	<%= form_for @search, :url => jobs_path, :html => {:method => :get} do |f| %>
+	<div>
+		<label for="title">Title:</label>
+		<%= f.text_field :title_contains %><br />
+	</div>
+		
+	<div>
+		<label for="category">Category:</label>
+		<%= f.select :category_equals, Category.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %>
+	</div>
+	
+	<div style="margin-left: 0px;">
+		<%= f.submit %>
+	</div>
+	<% end %>
+</fieldset></div>
+<% if params[:search] %>
+	<% if @jobs.length > 0 %>
+		<% @jobs.each do |job| %>
+		  <tr>
+			<td><%= job.title %></td>
+			<td><%= job.category %></td>
+			<td><%= job.description %></td>
+			<td><%= link_to 'Show', job %></td>
+		  </tr><br>
+		<% end %>
+	<% else %>
+		No results found.
+	<% end %>
+<% end %>
+
+<% if current_user && current_user.admin? %>
+	<%= link_to 'New job', new_job_path %> | <%= link_to 'New category', new_category_path %>
+<% end %>

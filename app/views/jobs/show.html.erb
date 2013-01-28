@@ -1,0 +1,26 @@
+<!-- START_HIGHLIGHT -->
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% elsif flash[:alert] %>
+	<p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<!-- END_HIGHLIGHT -->
+
+<p>
+  <b>Title:</b>
+  <%= @job.title %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @job.category %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @job.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
