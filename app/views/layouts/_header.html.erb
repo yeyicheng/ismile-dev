@@ -10,9 +10,6 @@
 			<li><%= link_to t('team'), pages_people_path + '?locale=zh' %></li>
 			<li><%= link_to t('taskforce'), pages_taskforce_path + '?locale=zh' %></li>
 			<li><%= link_to t('training'), pages_training_path + '?locale=zh' %></li>
-			<% if current_user %>
-				<li><%= link_to t('logout'), logout_path %></li> 
-			<% end %>
 		<% else %>
 			<li><%= link_to t('initiative'), pages_initiative_path %></li>
 			<li><%= link_to t('career'), jobs_path %></li>			
