@@ -17,9 +17,6 @@
 			<li><%= link_to t('team'), pages_people_path %></li>
 			<li><%= link_to t('taskforce'), pages_taskforce_path %></li>
 			<li><%= link_to t('training'), pages_training_path %></li>
-			<% if current_user %>
-				<li><%= link_to t('logout'), logout_path %></li> 
-			<% end %>
 		<% end %>
 	</ul>
 	<div id='multi-lang'><%= link_to '中文', root_path + '?locale=zh' %> | <%= link_to 'English', root_path %></div>
