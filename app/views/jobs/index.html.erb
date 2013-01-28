@@ -27,20 +27,22 @@
 	</div>
 	<% end %>
 </fieldset></div>
+<table>
 <% if params[:search] %>
+	<th>Title</th>
+	<th>Category</th><br/>
 	<% if @jobs.length > 0 %>
 		<% @jobs.each do |job| %>
 		  <tr>
 			<td><%= job.title %></td>
 			<td><%= job.category %></td>
-			<td><%= job.description %></td>
 			<td><%= link_to 'Show', job %></td>
 		  </tr><br>
 		<% end %>
 	<% else %>
 		No results found.
 	<% end %>
-<% end %>
+<% end %></table>
 
 <% if current_user && current_user.admin? %>
 	<%= link_to 'New job', new_job_path %> | <%= link_to 'New category', new_category_path %>
