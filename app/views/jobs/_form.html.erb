@@ -10,7 +10,8 @@
       </ul>
     </div>
   <% end %>
-
+<div class="ismile_form">
+<fieldset><legend>New Job</legend>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -21,9 +22,9 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :rows => 10 %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+<% end %></fieldset></div>
