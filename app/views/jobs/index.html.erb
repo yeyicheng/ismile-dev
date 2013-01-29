@@ -28,13 +28,16 @@
 </fieldset></div>
 <table>
 <% if params[:search] %>
-	<th>Title</th>
-	<th>Category</th><br/>
+	
 	<% if @jobs.length > 0 %>
+		<th>职位</th>
+		<th>区域</th>
+		<th>部门</th><br/>
 		<% @jobs.each do |job| %>
 		  <tr>
 			<td><%= job.title %></td>
-			<td><%= job.category %></td>
+			<td><%= Area.find(job.area).name %></td>
+			<td><%= Category.find(job.category).name %></td>
 			<td><%= link_to 'Show', job %></td>
 		  </tr><br>
 		<% end %>

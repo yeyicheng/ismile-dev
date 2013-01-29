@@ -12,8 +12,13 @@
 </p>
 
 <p>
+  <b>Area:</b>
+  <%= Area.find(@job.area).name %>
+</p>
+
+<p>
   <b>Category:</b>
-  <%= @job.category %>
+  <%= Category.find(@job.category).name %>
 </p>
 
 <p>
