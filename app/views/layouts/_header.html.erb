@@ -3,68 +3,21 @@
 		<%= link_to (image_tag "logo_s.png", width: '300'), root_path %>
 	</div>
 	<ul class='top-nav'>
-		<% if params[:locale] == 'zh' %>
-			<li><%= link_to t('initiative'), pages_initiative_path + "?locale=zh" %></li>
-			<li><%= link_to t('career'), jobs_path + '?locale=zh' %></li>			
-			<li><%= link_to t('marketing'), pages_marketing_path + '?locale=zh' %></li>
-			<li><%= link_to t('team'), pages_people_path + '?locale=zh' %></li>
-			<li><%= link_to t('taskforce'), pages_taskforce_path + '?locale=zh' %></li>
-			<li><%= link_to t('training'), pages_training_path + '?locale=zh' %></li>
-		<% else %>
-			<li><%= link_to t('initiative'), pages_initiative_path %></li>
-			<li><%= link_to t('career'), jobs_path %></li>			
-			<li><%= link_to t('marketing'), pages_marketing_path %></li>
-			<li><%= link_to t('team'), pages_people_path %></li>
-			<li><%= link_to t('taskforce'), pages_taskforce_path %></li>
-			<li><%= link_to t('training'), pages_training_path %></li>
-		<% end %>
+		<li><%= link_to "iSmile", "http://ismile-consulting.herokuapp.com/", target: "_blank"  %></li>
+		<li><%= link_to "the iSmile Team", jobs_path %></li>			
+		<li><%= link_to 'Training', "http://ismile-consulting.herokuapp.com/pages/training", target: "_blank"  %></li>		
+		<li><%= link_to 'Taskforce', "http://ismile-consulting.herokuapp.com/pages/taskforce", target: "_blank"  %></li>
+		<li><%= link_to 'Marketing', "http://ismile-consulting.herokuapp.com/pages/marketing", target: "_blank" %></li>
+		<li><%= link_to 'Login', sessions_new_path %></li>
+
 	</ul>
-	<div id='multi-lang'><%= link_to '中文', root_path + '?locale=zh' %> | <%= link_to 'English', root_path %></div>
 	<div class='head-img'></div>
 	<div class='img-txt'></div>
 	<ul class='site-nav'>
-	<% if params[:locale] == 'zh' %>
-		<li><%= link_to t('home'), root_path + "?locale=zh" %></li>
-		<li><%= link_to t('about'), '#' %>
-			<ul class="sub-site-nav">
-				<li><%= link_to t('intro'), pages_about_path + "?locale=zh"  %></li>
-				<li><%= link_to t('initiative'), pages_initiative_path + "?locale=zh"  %></li>
-				<li><%= link_to t('people'), pages_people_path + "?locale=zh" %></li>
-			</ul>
-		</li>
-		<li><%= link_to t('service'), '#' %>
-			<ul class="sub-site-nav">
-				<li><%= link_to t('career'), pages_career_path + "?locale=zh" %></li>				
-				<li><%= link_to t('marketing'), pages_marketing_path + "?locale=zh" %></li>
-				<li><%= link_to t('quality'), pages_service_path + "?locale=zh" %></li>
-				<li><%= link_to t('taskforce'), pages_taskforce_path + "?locale=zh" %></li>
-				<li><%= link_to t('training'), pages_training_path + "?locale=zh" %></li>
-			</ul>
-		</li>
-		<li><%= link_to t('online'), sessions_new_path + "?locale=zh" %></li>
-		<li><%= link_to t('clients'), pages_clients_path + "?locale=zh" %></li>
-		<li><%= link_to t('contact'), pages_contact_path + "?locale=zh" %></li>
-	<% else %>
-		<li><%= link_to t('home'), root_path%></li>	
-		<li><%= link_to t('about'), '#' %>
-			<ul class="sub-site-nav">
-				<li><%= link_to t('intro'), pages_about_path %></li>
-				<li><%= link_to t('initiative'), pages_initiative_path %></li>
-				<li><%= link_to t('people'), pages_people_path %></li>
-			</ul>
-		</li>
-		<li><%= link_to t('service'), '#' %>
-			<ul class="sub-site-nav">
-				<li><%= link_to t('career'), jobs_path %></li>				
-				<li><%= link_to t('marketing'), pages_marketing_path %></li>
-				<li><%= link_to t('quality'), pages_service_path %></li>
-				<li><%= link_to t('taskforce'), pages_taskforce_path %></li>
-				<li><%= link_to t('training'), pages_training_path %></li>
-			</ul>
-		</li>
-		<li><%= link_to t('online'), sessions_new_path %></li>
-		<li><%= link_to t('clients'), pages_clients_path %></li>
-		<li><%= link_to t('contact'), pages_contact_path %></li>
-	<% end %>
+		<li><%= link_to "主页", root_path %></li>
+		<li><%= link_to "职位搜索", jobs_path %></li>				
+		<li><%= link_to "提交简历", pages_resume_path %></li>
+		<li><%= link_to "实习生园地", pages_intern_path %></li>
+		<li><%= link_to "联系我们", pages_contact_path %></li>
 	</ul>
 </div>

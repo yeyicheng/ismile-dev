@@ -1,4 +1,7 @@
 Ismile::Application.routes.draw do
+  resources :areas
+
+
   resources :categories
 
 
@@ -14,25 +17,12 @@ Ismile::Application.routes.draw do
 	match "/logout" => "sessions#destroy"
 	get "pages/home"
 	
-	get "pages/about"
+	get "pages/resume"
 	
-	get "pages/marketing"
-	
-	get "pages/service"
-	
-	get "pages/training"
-	
-	get "pages/career"
-	
-	get "pages/taskforce"
-	
-	get "pages/clients"
-	
+	get "pages/intern"
+		
 	get "pages/contact"
 	
-	get "pages/initiative"
-	
-	get "pages/people"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
